@@ -1,0 +1,26 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arti-kland/VueJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arti-kland/VueJs/issues"
+  },
+  "homepage": "https://github.com/arti-kland/VueJs#readme",
+  "dependencies": {
+    "imagemin": "^6.1.0",
+    "imagemin-pngquant": "^7.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
