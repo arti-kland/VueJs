@@ -2,9 +2,10 @@
     <div>
         <h1>{{name}}</h1>
 
-        <h3 v-bind:style="changeColor()">{{status}}</h3>
+        <h3 class="red" v-if="!status">Reste du stock = No</h3>
+        <h3 class="green" v-if="status">Reste du stock = Yes</h3>
 
-        <h5>{{checkedAt}}</h5>
+        <h5>Dernier relevée du stock : {{checkedAt}}</h5>
 
     </div>
 </template>
@@ -13,28 +14,22 @@
     export default {
         name: "Supplier",
         props: {
-            // msg: String
-        },
-        data: function () {
-            return {
-                name: 'fournisseur A',
-                status: true, // est ce qu'il y a du stock
-                color: 'green',
-                checkedAt: new Date().toLocaleString() // date de la dernière mise à jour du stock
-            }
-        },
-        methods: {
-            changeColor: function() {
-                if (this.status == false) {
-                    return {color: '#00ff00'}
-                }else {
-                    return {color: '#FF0060'}
-                }
-            }
+            id:Number,
+            name: String,
+            status: Boolean,
+            checkedAt: String
         }
     }
 </script>
 
 <style scoped>
+
+    .red{
+        color: red;
+    }
+
+    .green{
+        color: green;
+    }
 
 </style>

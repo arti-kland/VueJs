@@ -11,9 +11,6 @@
                 <router-link to="/map">Carte fournisseurs</router-link>
             </button>
 
-            <button class="space">
-                <router-link to="/suppliers">Fournisseur</router-link>
-            </button>
         </div>
 
         <router-view></router-view>
