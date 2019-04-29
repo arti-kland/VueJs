@@ -29,7 +29,7 @@
     }
 
     .green{
-        color: green;
+        color: yellowgreen;
     }
 
 </style>

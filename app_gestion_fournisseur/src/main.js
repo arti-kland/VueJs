@@ -4,6 +4,7 @@ import App from './App.vue'
 import Suppliers from './components/SuppliersList.vue'
 import SuppliersMap from './components/SuppliersMap.vue'
 import Supplier from './components/Supplier.vue'
+
 // import HelloWorld from './components/HelloWorld.vue'
 Vue.use(VueRouter)
 Vue.config.productionTip = true
@@ -11,11 +12,6 @@ Vue.config.productionTip = true
 const router = new VueRouter({
 
   mode: 'history',
-  methods: {
-    // showData: function(){
-    //
-    // }
-    },
 
   routes: [{
 
