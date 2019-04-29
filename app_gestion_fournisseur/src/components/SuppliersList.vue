@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: "SuppliersList",
+        name: "Suppliers",
         props: {
             msg: String
         }

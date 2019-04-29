@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-import SuppliersList from './components/SuppliersList.vue'
+import Suppliers from './components/SuppliersList.vue'
 import SuppliersMap from './components/SuppliersMap.vue'
-import Suppliers from './components/Suppliers.vue'
+import Supplier from './components/Supplier.vue'
 // import HelloWorld from './components/HelloWorld.vue'
 Vue.use(VueRouter)
 Vue.config.productionTip = true
@@ -21,7 +21,7 @@ const router = new VueRouter({
 
     path: '/list',
 
-    component: SuppliersList
+    component: Suppliers
   }, {
 
     path: '/map',
@@ -31,7 +31,7 @@ const router = new VueRouter({
 
     path: '/suppliers',
 
-    component: Suppliers
+    component: Supplier
   }
   // ,  {
   //   path: '*',
