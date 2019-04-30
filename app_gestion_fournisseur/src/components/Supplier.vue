@@ -14,7 +14,7 @@
     export default {
         name: "Supplier",
         props: {
-            id:Number,
+            id:String,
             name: String,
             status: Boolean,
             checkedAt: String
