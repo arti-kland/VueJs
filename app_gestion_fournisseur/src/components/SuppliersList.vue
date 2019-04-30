@@ -10,6 +10,7 @@
 <script>
     import Supplier from "./Supplier";
     import { format, render, cancel, register } from 'timeago.js';
+
     export default {
         name: "Suppliers",
         components: {
