@@ -6,6 +6,7 @@ import SuppliersMap from './components/SuppliersMap.vue'
 import Supplier from './components/Supplier.vue'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
+
 // import HelloWorld from './components/HelloWorld.vue'
 Vue.use(VueRouter)
 Vue.use(VueGoogleMaps, {
