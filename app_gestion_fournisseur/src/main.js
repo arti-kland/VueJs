@@ -5,6 +5,7 @@ import Suppliers from './components/SuppliersList.vue'
 import SuppliersMap from './components/SuppliersMap.vue'
 import Supplier from './components/Supplier.vue'
 import * as VueGoogleMaps from 'vue2-google-maps'
+import { store } from './store/store'
 
 
 // import HelloWorld from './components/HelloWorld.vue'
@@ -46,7 +47,7 @@ const router = new VueRouter({
 
 new Vue({
   //el: '#app',
-
+  store,
   router,
   render: h => h(App)
 }).$mount('#app')

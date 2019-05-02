@@ -8,9 +8,10 @@
 </template>
 
 <script>
-    import axios from 'axios'
-    import Supplier from "./Supplier";
     import { format, render, cancel, register } from 'timeago.js';
+    import Supplier from "./Supplier";
+    import { mapState} from 'vuex'
+
 
     export default {
         name: "Suppliers",
@@ -20,26 +21,13 @@
         props: {
             msg: String,
         },
-        data: function () {
-            return {
-                suppliers: [],
-                loading: true,
-                error: false
-            }
-        },
-        created () {
-            axios
-                .get('https://api-suppliers.herokuapp.com/api/suppliers')
-                .then(response => {
-                    this.suppliers = response.data;
-                    console.log(this.suppliers)
-                })
-                .catch(error => {
-                    console.log(error)
-                    this.error = true
-                })
-                .finally(() => this.loading = false)
+        computed: mapState([
+            'suppliers'
+        ]),
+        mounted: function () {
+            this.$store.dispatch('LOAD_SUPPLIERS_LIST')
         }
+
     }
 </script>
 

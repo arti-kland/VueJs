@@ -25,36 +25,19 @@
 </template>
 
 <script>
-    import axios from 'axios'
-    import VueAxios from 'vue-axios'
+    import { mapState} from 'vuex'
     export default {
         name: "SuppliersMap",
         props: {
             msg: String
         },
-        data: function () {
-
-            return {
-                suppliers: [],
-                loading: true,
-                error: false
-            }
-        },
-        created () {
-            axios
-                .get('https://api-suppliers.herokuapp.com/api/suppliers')
-                .then(response => {
-                    this.suppliers = response.data;
-                    console.log(this.suppliers)
-                })
-                .catch(error => {
-                    console.log(error)
-                    this.error = true
-                })
-                .finally(() => this.loading = false)
-        }
+        computed: mapState([
+            'suppliers'
+        ]),
+    mounted: function () {
+        this.$store.dispatch('LOAD_SUPPLIERS_LIST')
     }
-
+    }
 </script>
 
 <style scoped>
