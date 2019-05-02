@@ -29,8 +29,5 @@ export const store = new Vuex.Store({
         completedSuppliers: state => {
             return state.suppliers.filter(suppliers => suppliers.completed).length
         }
-    },
-    modules: {
-
     }
 })

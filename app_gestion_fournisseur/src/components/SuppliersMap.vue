@@ -5,8 +5,8 @@
         <div class="container">
             <GmapMap
                     class="sizeMap"
-                    :center="{lat:10, lng:10}"
-                    :zoom="7"
+                    :center="{ lat:currentPosition.lat , lng:currentPosition.lng}"
+                    :zoom="17"
                     map-type-id="terrain"
             >
                 <GmapMarker
@@ -34,10 +34,29 @@
         computed: mapState([
             'suppliers'
         ]),
-    mounted: function () {
-        this.$store.dispatch('LOAD_SUPPLIERS_LIST')
+        data : function() {
+        return {
+            currentPosition : { lat:0, lng:0}
+        }
+        },
+        mounted: function () {
+            this.$store.dispatch('LOAD_SUPPLIERS_LIST');
+            this.geolocation()
+        },
+        methods: {
+            geolocation: function () {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    this.currentPosition = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    }
+                });
+            }
+        }
     }
-    }
+
+
+
 </script>
 
 <style scoped>
