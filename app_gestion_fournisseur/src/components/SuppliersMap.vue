@@ -67,7 +67,7 @@
     }
 
     .sizeMap {
-        width: 800px;
+        width: 1200px;
         height: 600px;
         margin-bottom: 50px;
     }
