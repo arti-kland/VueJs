@@ -43,7 +43,7 @@
                 'filteredByStockKo'
             ]),
             filtredDatas: function() {
-                if (this.filter==='all') {
+                if (this.filter === 'all') {
                     return this.suppliers
                 }
                 if (this.filter === 'Ok') {

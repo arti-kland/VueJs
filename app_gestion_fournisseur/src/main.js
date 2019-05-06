@@ -6,9 +6,8 @@ import SuppliersMap from './components/SuppliersMap.vue'
 import Supplier from './components/Supplier.vue'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import { store } from './store/store'
+import './registerServiceWorker'
 
-
-// import HelloWorld from './components/HelloWorld.vue'
 Vue.use(VueRouter)
 Vue.use(VueGoogleMaps, {
   load: {
@@ -37,12 +36,7 @@ const router = new VueRouter({
     path: '/suppliers',
 
     component: Supplier
-  }
-  // ,  {
-  //   path: '*',
-  //   redirect: '/helloWorld'
-  // }
-  ]
+  }]
 })
 
 new Vue({
